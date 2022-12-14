@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# Set alias
+# Terraform
+alias tf=terraform
+alias tfm=terraforming
+
+# Systems
+alias powerup='sudo apt update && sudo apt -y upgrade && sudo apt -y dist-upgrade && sudo apt -y autoremove && sudo apt -y autoclean'
+
+# remove Profile display
+prompt_context() {
+  if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
+    prompt_segment black default "%(!.%{%F{yellow}%}.)$USER" 
+  fi 
+}
+
+# python
+alias python=python3
+alias pip=pip3
+
+# minikube
+alias mk=minikube
+
+# tmux
+alias t=tmux
+alias mux=tmuxinator
