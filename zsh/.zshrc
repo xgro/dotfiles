@@ -102,7 +102,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Add PATH for scripting. Make sure this is the last PATH variable change.
-for file in ~/dotfiles/zsh/.{completions,exports}; 
+for file in ~/dotfiles/zsh/.{exports}; 
   do
 	  [ -r "$file" ] && [ -f "$file" ] && source "$file";
   done;
