@@ -4,15 +4,15 @@ cp -r ~/dotfiles/zsh/.zshrc ~/.zshrc
 # set git config
 cp -r ~/dotfiles/git/.gitconfig ~/.gitconfig
 
-# force copy vim config
-cp -r ~/dotfiles/vim/.vimrc ~/.vimrc
-cp -r ~/dotfiles/config/nvim ~/.config/nvim
-
 ## install vim Bundle
 if [ ! -d "$HOME/.vim/bundle/Vundle.vim" ];then
     echo "install vim plugins"
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 fi
+# force copy vim config
+cp -r ~/dotfiles/vim/.vimrc ~/.vimrc
+cp -r ~/dotfiles/config/nvim ~/.config/nvim
+
 ## ignore error
 vim -E -s -u ~/.vimrc +PluginInstall +qall
 
